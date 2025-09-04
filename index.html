@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday — Payel 💚</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Floating background hearts -->
+  <div id="floating-hearts" aria-hidden="true"></div>
+
+  <main class="card">
+    <!-- Left / top area: greeting and slideshow -->
+    <section class="hero">
+      <div class="greeting">
+        <h1 id="typed-name" class="typed"></h1>
+        <h2 class="subtitle">Happy Birthday, <span id="her-name">Payel Ghosh</span> ❤</h2>
+        <div class="glow">✨</div>
+      </div>
+
+      <div class="slideshow" id="slideshow">
+        <!-- images will be present in DOM -->
+        <div class="slides">
+          <!-- images placed statically so no JS file creation is required -->
+          <img src="assets/photos/p1.jpg" alt="memory 1" data-caption="Our first trip 😍">
+          <img src="assets/photos/p2.jpg" alt="memory 2" data-caption="My favourite smile 🥰">
+          <img src="assets/photos/p3.jpg" alt="memory 3" data-caption="Sunset with you 🌅">
+          <img src="assets/photos/p4.jpg" alt="memory 4" data-caption="Coffee memories ☕">
+          <img src="assets/photos/p5.jpg" alt="memory 5" data-caption="Late-night talks 🌙">
+          <img src="assets/photos/p6.jpg" alt="memory 6" data-caption="Laughs forever 😂">
+          <img src="assets/photos/p7.jpg" alt="memory 7" data-caption="Celebrations 🎉">
+          <img src="assets/photos/p8.jpg" alt="memory 8" data-caption="Candid moments 📸">
+          <img src="assets/photos/p9.jpg" alt="memory 9" data-caption="Road trip 🛣">
+          <img src="assets/photos/p10.jpg" alt="memory 10" data-caption="Always you ❤">
+        </div>
+        <div class="caption" id="slide-caption">Our first trip 😍</div>
+        <div class="controls">
+          <button id="prev">◀</button>
+          <button id="next">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right / bottom area: interactive and extras -->
+    <aside class="panels">
+      <div class="controls-row">
+        <button id="heart-btn" class="heart-btn" title="Click the heart to see your surprise">💖 Click the heart</button>
+        <button id="play-music" class="icon-btn" title="Play/Pause Music">🎵</button>
+        <button id="mute-btn" class="icon-btn" title="Mute/Unmute">🔊</button>
+      </div>
+
+      <div class="countdown">
+        <h3>Countdown to your Birthday</h3>
+        <div id="count-timer">
+          <span id="days">0</span> days
+          <span id="hours">0</span> hrs
+          <span id="mins">0</span> mins
+          <span id="secs">0</span> secs
+        </div>
+      </div>
+
+      <div class="letter">
+        <button id="open-letter" class="open-letter">Open Love Letter ✉</button>
+        <div class="love-text" id="love-text" aria-live="polite"></div>
+      </div>
+
+      <div class="game">
+        <h4>Pop the Balloons 🎈</h4>
+        <div id="balloon-area" class="balloon-area" aria-label="balloon game"></div>
+      </div>
+
+      <div class="final-message" id="final-message" aria-hidden="true">
+        <h3>I'm lucky to have you. Happy Birthday, my love! 💖</h3>
+        <button id="open-gift" class="open-gift">Open Gift 🎁</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- fireworks canvas (hidden until triggered) -->
+  <canvas id="fireworks-canvas" class="fireworks" aria-hidden="true"></canvas>
+
+  <!-- Audio elements -->
+  <audio id="bg-music" loop src="assets/music.mp3"></audio>
+  <audio id="voice-note" src="assets/voice-note.mp3"></audio>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
